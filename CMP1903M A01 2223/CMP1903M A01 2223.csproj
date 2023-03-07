@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="Pack.cs" />
+    <Compile Include="testing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

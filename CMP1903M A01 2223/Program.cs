@@ -10,10 +10,8 @@ namespace CMP1903M_A01_2223
     {
         static void Main(string[] args)
         {
-            new Pack();
-            Console.WriteLine("hi");
-            Console.WriteLine("{0} a  {1}",Pack.deal().Suit,Pack.deal().Value);
-            Console.Read();
+            //Calls the testing class when project is ran
+            testing.test();
         }
     }
 }
