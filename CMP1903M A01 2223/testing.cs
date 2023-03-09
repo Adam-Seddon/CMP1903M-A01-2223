@@ -20,7 +20,7 @@ namespace CMP1903M_A01_2223
             Pack.shuffleCardPack(3);
             Console.WriteLine("Dealing 1 card");
             Console.WriteLine(Pack.deal());
-            List<Card> Hand = Pack.dealCard(10);
+            List<Card> Hand = Pack.dealCard(52);
             foreach (var card in Hand)
             {
                 Console.WriteLine(card);

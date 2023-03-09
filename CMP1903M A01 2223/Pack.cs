@@ -51,9 +51,10 @@ namespace CMP1903M_A01_2223
                 }
                 pack.RemoveRange(0, 52);
             }
-            else
+            //added error handling due to code review
+            if (typeOfShuffle < 1 || typeOfShuffle > 3)
             {
-                return true;
+                throw new ArgumentOutOfRangeException(typeOfShuffle+"typeOfShuffle must be 1, 2 or 3.");
             }
                 return true;
         }
@@ -68,6 +69,11 @@ namespace CMP1903M_A01_2223
         public static List<Card> dealCard(int amount)
         {
             //Deals the number of cards specified by 'amount' and then returns them to the back of the pack in order
+            //added error handling due to code review
+            if(amount > 52)
+            {
+                throw new ArgumentOutOfRangeException(amount + "amount is greater than number of cards this amount cannot be dealt.");
+            }
             Console.WriteLine("Dealing "+amount+" cards");
             List<Card> hand = new List<Card>();
             for (int i = 0; i < amount; i++)
